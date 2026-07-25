@@ -185,7 +185,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 25.13422, y: -0.14523888}
+  m_Offset: {x: 34.18445, y: -0.14523888}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -195,7 +195,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 68.225235, y: 2.323289}
+  m_Size: {x: 86.32564, y: 2.323289}
   m_EdgeRadius: 0
 --- !u!1 &368307329
 GameObject:
@@ -207,8 +207,9 @@ GameObject:
   m_Component:
   - component: {fileID: 368307331}
   - component: {fileID: 368307330}
-  - component: {fileID: 368307333}
   - component: {fileID: 368307332}
+  - component: {fileID: 368307334}
+  - component: {fileID: 368307333}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -364,6 +365,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &368307334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368307329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba00e085da6c984e927319f1e21e0ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  speed: 5
+  jumpForce: 5
+  rb: {fileID: 368307333}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
