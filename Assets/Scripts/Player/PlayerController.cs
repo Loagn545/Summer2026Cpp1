@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Collider2D col;
     private SpriteRenderer sr;
+    private Animator anim;
 
     [SerializeField]
     private LayerMask groundLayer;
@@ -43,7 +44,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
         sr = GetComponent<SpriteRenderer>();
-        //anim = Getcomponent<Animator>();
+        anim = GetComponent<Animator>();
 
         rb.linearVelocity = Vector2.zero;
 
@@ -73,6 +74,9 @@ public class PlayerController : MonoBehaviour
         }
 
         SpriteFlip(horizontalInput);
+
+        anim.SetBool("isGrounded", isGrounded);
+        anim.SetFloat("horizontalInput", Mathf.Abs(horizontalInput)); 
     }
 
     private void SpriteFlip(float horizontalInput) => sr.flipX = (horizontalInput < 0);
